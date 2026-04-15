@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Global Reset */
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background: #dedede;
+            font-family: 'Helvetica', arial, sans-serif;
+            font-size: 15px;
+        }
+
+        p{
+            margin-bottom: 20px;
+            line-height: 1.5em;
+        }
+
+        h3{
+            margin-bottom: 20px;
+            border-bottom: 1px solid #aaa;
+        }
+
+        a{
+            text-decoration: none;
+            color: #333;
+        }
+
+        a:hover{
+            color: #666;
+        }
+
+        /* Layout Containers */
+        .container{
+            max-width: 1080px;
+            margin: 20px auto;
+            background: #fff;
+            overflow: hidden;
+            padding: 10px;
+        }
+
+        .header{
+            border: 1px solid #dedede;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        /* Main Section */
+        .left{
+            width: 250px;
+            border: 1px solid #dedede;
+            background: #e5e5e5;
+            padding: 10px;
+            margin: 10px;
+            float: left;
+        }
+
+        .middle{
+            width: 500px;
+            border: 1px solid #dedede;
+            padding: 10px;
+            margin: 10px;
+            float: left;
+        }
+
+        .middle img{
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px 0;
+            background-color: #eee; /* Placeholder jika gambar tidak ada */
+        }
+
+        .middle a{
+            font-weight: bold;
+        }
+
+        .right{
+            width: 250px;
+            border: 1px solid #dedede;
+            padding: 10px;
+            margin: 10px;
+            float: left;
+        }
+
+        /* Right Sidebar Navigation */
+        .right ul{
+            list-style-type: none;
+        }
+
+        .right ul li{
+            display: block;
+        }
+
+        .right ul li a{
+            display: block;
+            border-bottom: 1px solid #dedede;
+            margin-bottom: 10px;
+            padding: 10px 5px;
+        }
+
+        .right ul li a:hover{
+            color: orange;
+        }
+
+        /* Footer Section */
+        .footer{
+            clear: both;
+            border: 1px solid #dedede;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        /* Responsive Adjustment untuk Layar Kecil */
+        @media (max-width: 1080px) {
+            .left, .middle, .right {
+                width: calc(100% - 20px);
+                float: none;
+            }
+        }
+        @media (max-width: 700px) {
+            .left, .midle, .right {
+                width: 100%;
+                float: none;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>Responsive Layout</h1>
+        <strong>3 Columns</strong> --- <small><a href="#">Back to article</a></small>
+    </div> <!--/.header -->
+
+    <div class="main">
+
+        <div class="left">
+            <h3>Left</h3>
+            <p>Tutorial adalah Website untuk Web Designer & Web Developer Indonesia, Serta Graphic Designer Indonesia. </p>
+        </div> <!--/.left -->
+
+        <div class="middle">
+            <h3>Middle</h3>
+            <p><strong><a href="#" target="_blank">Pengenalan responsive web design / desain web responsif</a></strong> - Hi, pertama-tama kami ingin mengucapkan Selamat Tahun Baru 2019 untuk para pembaca semuanya, semoga tahun ini menjadi tahun yang lebih baik untuk kita dibanding tahun-tahun sebelumnya.</p>
+            
+            <!-- Menggunakan placeholder karena file gambar lokal tidak tersedia -->
+            <p><img src="360/logo360.png" alt="Logo 360"></p>
+
+            <p><a href="#">Seberapa Penting Sih Responsive Web Design?</a></p>
+            <p>Semakin hari semakin banyak orang yang menggunakan perangkat mobile untuk browsing, seperti menggunakan smartphone dan tablet untuk setiap tugas atau pekerjaannya sehari-hari. Pekerjaan yang dulunya hanya dilakukan melalui personal komputer (desktop & laptop) sekarang hampir semua sudah bisa digunakan juga melalui perangkat mobile.</p>
+            
+            <p><img src="ftik/ftik.png.jpeg" alt="FTIK"></p>
+        </div> <!--/.middle -->
+
+        <div class="right">
+            <h3>Right</h3>
+            <p>Responsive Web Design adalah sebuah teknik yang digunakan untuk membuat layout website menyesuaikan ukuran lebar layar dari perangkat yang digunakan</p>
+            <h3>Artikel Responsive Lain</h3>
+            <ul>
+                <li><a href="#">Pengenalan Responsive Web Design</a></li>
+                <li><a href="#">Seberapa Penting Sih Responsive Web Design?</a></li>
+                <li><a href="#">6 Tips Untuk Membuat Website Responsive</a></li>
+                <li><a href="#">9 Prinsip Dasar Responsive Web Design</a></li>
+                <li><a href="#">7 Template Blogger Blogspot Gratis Dan Responsive</a></li>
+                <li><a href="#">Test Responsive Web Design</a></li>
+            </ul>
+        </div> <!--/.right -->
+
+    </div> <!--/.main -->
+
+    <div class="footer">
+        <h4>Footer</h4>
+        <p>Copyright &copy; 2019 <a href="#">Teknik Informatika UNP Kediri</a></p>
+    </div> <!--/.footer -->
+
+</div>
+
+</body>
+</html>
